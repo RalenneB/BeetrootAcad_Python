@@ -1,5 +1,7 @@
 """
 This is the first day homework, hope it's fine
+Assignement: Hard level: write a program, which has two print statements
+to print the following text (capital letters “O” and “H” made out of “#” symbols):
 """
 
 
