@@ -1,0 +1,29 @@
+"""
+Level: Advanced: The greeting program.
+
+Make a program that has your name and the current day of the week
+stored as separate variables, and then prints a message like this:
+
+“Good day <name>! <day> is a perfect day to learn some Python.”
+
+Note that <name> and <day> are predefined variables in the source
+code.
+An additional option would be to use different string formatting
+methods for constructing the result string.
+"""
+from datetime import date
+import calendar
+
+my_date = date.today()
+calendar.day_name[my_date.weekday()]
+name = 'Raluca'
+today = calendar.day_name[my_date.weekday()] #global vars
+
+
+def greetings(name, date):
+    print('Good day, ' + name + '! ' + date + ' is a perfect day to learn some Python.')
+
+
+if __name__ == '__main__':
+    greetings(name, today)
+
