@@ -21,7 +21,11 @@ today = calendar.day_name[my_date.weekday()] #global vars
 
 
 def greetings(name, date):
-    print('Good day, ' + name + '! ' + date + ' is a perfect day to learn some Python.')
+    message = (
+            "Good day, %s! %s is a perfect day to learn some Python."
+            % (name, date))
+    # print('Good day, ' + name + '! ' + date + ' is a perfect day to learn some Python.') #old method
+    print(message)
 
 
 if __name__ == '__main__':
