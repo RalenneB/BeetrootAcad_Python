@@ -24,8 +24,10 @@ def greetings(name, date):
     message = (
             "Good day, %s! %s is a perfect day to learn some Python."
             % (name, date))
-    # print('Good day, ' + name + '! ' + date + ' is a perfect day to learn some Python.') #old method
     print(message)
+
+    # print('Good day, ' + name + '! ' + date + ' is a perfect day to learn some Python.') # old method
+    # print(f"Good day, {name}! {date} is a perfect day to learn some Python.") # another method
 
 
 if __name__ == '__main__':
