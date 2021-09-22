@@ -10,23 +10,21 @@ numeric characters and is only 10 characters long.
 Print a suitable message depending on the outcome of the
 string evaluation.
 """
-phone_number = '1234567890'  # aiaidigri3
+phone_number = '1234589'  # aiaidigri3
 
 
 def phone_validator(number):
     if type(number) != int:
-        if len(number) == 10:
-            try:
-                number = int(number)
-                print('Valid number')
-            except ValueError:
-                print('Please provide an actual number')
+        if len(number) == 10 and number.isdigit():
+            print('Valid number!')
+        elif len(number) == 10 and not number.isdigit():
+            print('There should be only numbers, not letters or other special characters!')
         elif len(number) != 10 and not number.isdigit():
-            print('The number should have 10 digits only, not letters!')
+            print('The number should have 10 digits and to not contain other characters!')
         elif len(number) != 10 and number.isdigit():
             print('The number should have 10 digits, no more, no less!')
         else:
-            print('Please check again the number provided') #should never run
+            print('Please check again the number provided')
 
     elif type(number) == int:
         convert = str(number)
