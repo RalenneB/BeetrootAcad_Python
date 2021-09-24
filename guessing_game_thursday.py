@@ -9,7 +9,7 @@ statement."""
 import random
 
 
-user_input = input("What number am I thinking of? From 1 to 9 only:  ")
+user_input = input("What number am I thinking of? From 1 to 10 only:  ")
 
 
 def guessing_game(typed_input):
