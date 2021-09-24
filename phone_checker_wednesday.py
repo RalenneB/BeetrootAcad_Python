@@ -10,28 +10,29 @@ numeric characters and is only 10 characters long.
 Print a suitable message depending on the outcome of the
 string evaluation.
 """
-phone_number = '1234589'  # aiaidigri3
+phone_number = '1234567890'  # aiaidigri3
 
 
 def phone_validator(number):
     if type(number) != int:
-        if len(number) == 10 and number.isdigit():
+        if len(number) == 10 and number.isnumeric():
             print('Valid number!')
-        elif len(number) == 10 and not number.isdigit():
+        elif len(number) == 10 and not number.isnumeric():
             print('There should be only numbers, not letters or other special characters!')
-        elif len(number) != 10 and not number.isdigit():
+        elif len(number) != 10 and not number.isnumeric():
             print('The number should have 10 digits and to not contain other characters!')
-        elif len(number) != 10 and number.isdigit():
+        elif len(number) != 10 and number.isnumeric():
             print('The number should have 10 digits, no more, no less!')
         else:
             print('Please check again the number provided')
-
     elif type(number) == int:
         convert = str(number)
         if len(convert) == 10:
             print('Valid number')
         else:
             print('The number should have 10 digits!')
+    else:
+        print('Please check again and provide a valid number')  # should not exec this line ever
 
 
 if __name__ == '__main__':
